@@ -184,7 +184,7 @@ class Client(User):
             print(f"{self.name}: no card assigned")
             return False
 
-        print(f"\n--- Paying order {order.order_id} with card ---")
+        print(f"\nPaying order {order.order_id} with card")
         if self.credit_card.charge(order.amount):
             order.is_paid = True
             print(f"Order {order.order_id} paid by card!")
